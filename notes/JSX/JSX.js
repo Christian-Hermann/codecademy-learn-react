@@ -126,3 +126,15 @@ const peopleList = people.map((person, i) => (
 
 // root.render goes here:
 root.render(<ul>{peopleList}</ul>);
+
+//
+
+const people = ["Rowe", "Prevost", "Gare"];
+
+const peopleList = people.map((person, i) => (
+  // expression goes here:
+  <li key={"person_" + i}>{person}</li>
+));
+
+// root.render goes here:
+root.render(<ol>{peopleList}</ol>);
