@@ -46,3 +46,8 @@ root.render(myList);
 
 const myDiv = <div className="big">I AM A BIG DIV</div>;
 root.render(myDiv);
+
+// Variables in JSX
+
+const theBestString = "This text was accessed through a javascript variable";
+root.render(<h1>{theBestString}</h1>);
