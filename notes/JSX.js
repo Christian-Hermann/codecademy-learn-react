@@ -114,3 +114,15 @@ const pics = {
 const img = <img src={pics[coinToss() === "heads" ? "kitty" : "doggy"]} />;
 
 root.render(img);
+
+// .map in JSX
+
+const people = ["Rowe", "Prevost", "Gare"];
+
+const peopleList = people.map((person, i) => (
+  // expression goes here:
+  <li>{person}</li>
+));
+
+// root.render goes here:
+root.render(<ul>{peopleList}</ul>);
