@@ -22,13 +22,27 @@ const blog = (
 );
 
 // passing a Variable to render
-const toDoList = (
-  <ol>
+
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+const container = document.getElementById("app");
+const root = createRoot(container);
+
+// Write code here:
+
+const myList = (
+  <ul>
     <li>Learn React</li>
-    <li>Become a Developer</li>
-  </ol>
+    <li>Become a developer</li>
+  </ul>
 );
 
 const container = document.getElementById("app");
 const root = createRoot(container);
-root.render(toDoList);
+root.render(myList);
+
+// class vs className
+
+const myDiv = <div className="big">I AM A BIG DIV</div>;
+root.render(myDiv);
