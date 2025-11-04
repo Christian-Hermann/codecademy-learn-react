@@ -19,14 +19,29 @@ for (const animal in animals) {
       src={animals[animal].image}
       aria-label={animal}
       role="button"
+      onClick={displayFact}
     />
   );
 }
+
+function displayFact(e) {
+  const animal = e.target.alt;
+  const selectedAnimal = animals[animal];
+  const optionIndex = Math.floor(Math.random() * selectedAnimal.facts.length);
+  const funFact = selectedAnimal.facts[optionIndex];
+
+  const factP = document.getElementById("fact");
+  if (factP) {
+    factP.innerHTML = funFact;
+  }
+}
+
 const animalFacts = (
   <div>
     {background}
     <div className="animals">{images}</div>
     <h1>{title === "" ? "Click an animal for a fun fact" : title}</h1>
+    <p id="fact"></p>
   </div>
 );
 
